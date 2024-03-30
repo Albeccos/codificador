@@ -1,0 +1,245 @@
+:root{
+    --color-azul: #0A3871;
+    --color-blanco: #FFFFFF;
+    --color-gris: #D8DFE8;
+    --color-grisplata: #e6e6e6;
+    --color-ligthblue: #E9ECF8;
+    --color-gray500: #343A40;
+    --color-gray400: #495057;
+ 
+}
+body {
+    background: linear-gradient(var(--color-grisplata), var(--color-gray500));
+   font-family: "Monserrat", sans-serif;
+   font-optical-sizing: auto; 
+   font-weight: normal;
+   font-style: normal;
+}
+
+.header {       
+    width: 90%;
+    margin: auto;
+    
+}
+
+.logo{
+    margin-top: 40px;
+}
+
+.main {
+    width: 80.5%;
+    margin: auto 40px auto auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 90px - 72px);
+    align-items: end;
+}
+/*left*/
+.left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ingreso-texto {
+    width: 80%;
+    font-size: 32px;
+    color: var(--color-azul);
+    resize: none;
+    border: none;
+    background: none;
+    outline: none;
+    height: 80%;
+}
+
+.ingreso-texto::placeholder {
+    color: var(--color-azul);
+}
+
+.info-ayuda{
+    vertical-align: middle;
+}
+
+.left-info {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--color-gray400);
+    opacity: 80%;
+}
+
+.boton-left {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.boton-encriptar,
+.boton-desencriptar,
+.boton-copiar {
+    max-width: 328px;
+    width: 40%;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
+.boton-encriptar {
+    background-color: var(--color-azul);
+    color:var(--color-blanco);
+    border: none;
+}
+
+.boton-desencriptar {
+    background-color: var(--color-ligthblue);
+    color: var(--color-azul);
+    border-color: var(--color-azul);
+    border-width: 1px;
+    border-style: solid;
+}
+
+/*right*/ 
+.right {
+    background-color: var(--color-blanco);
+    border-radius: 32px;
+    height: calc(100% + 8px);
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+.right.ajustar{
+    justify-content: space-between;
+}
+
+.resultado {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--color-gray400);
+    text-align: left;
+    resize: none;
+    border: none;
+    background: none;
+    outline: none;
+    display: none;
+    height: 80%;
+}
+
+.muneco {
+    width: 100%;
+}
+
+.mensaje-final {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
+    color: var(--color-gray500);
+    height: 58px;
+}
+
+.texto-ayuda {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-gray400);
+    height: 48px;
+}
+
+.boton-copiar {
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-azul);
+    border-color: var(--color-azul);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.oculto {
+    display: none;
+}
+
+footer {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 5px;
+}
+
+.footer-texto {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 50px;
+    margin: 0 auto;
+}
+
+i{
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--color-ligthblue);
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 75% 25%;
+        width: auto;
+        margin: auto 40px;
+    }
+
+    .boton-left {
+        justify-content: center;
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar {
+        width: 45%;
+    }
+
+    .right {
+        height: 100%;
+    }
+
+    .resultado{
+        text-size-adjust: auto;
+    }
+
+    .muneco {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        margin: auto 16px;
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar {
+        max-width: 100%;
+        width: 100%;
+    }
+}

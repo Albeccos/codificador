@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="reset.css"> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Encriptador</title>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <img class="logo" src="imagenes/Logo.png" alt="Logo de alura">
+            </div>   
+        </header>
+        <main>
+            <div class="main">
+                <section class="left">
+
+                    <textarea placeholder="Ingrese el texto aquí" class="ingreso-texto" id="ingresoTexto"></textarea>
+
+                    <div class="footer-left">
+                        <div class="info-ayuda">
+                            <img src="/imagenes/exclamacion.png" alt="signo de exclamación">
+                            <span class="left-info">Solo letras minúsculas y sin acento</span>
+                        </div>
+                        
+                        <div class="boton-left">
+                            <button id="botonEncriptar" onclick="encriptar()" class="boton-encriptar">Encriptar</button> 
+                            <button id="botonDesencriptar" onclick="desencriptar()" class="boton-desencriptar">Desencriptar</button>     
+                        </div>   
+                    </div>
+                    
+                </section>
+    
+                <section id="right" class="right">   
+                    <textarea class="resultado" id="resultado"></textarea>
+                    <img id="muneco" class="muneco" src="imagenes/Encypt.png" alt="imagen de muñeco sentado">
+                    <h2 id="mensajeFinal" class="mensaje-final">Ningún mensaje fue encontrado</h2>    
+                    <p id="textoAyuda" class="texto-ayuda">Ingresa el texto que desees encriptar o desecriptar.</p>     
+                    <button id="botonCopiar" onclick="copiar()"class="boton-copiar oculto">Copiar</button>    
+                </section>
+            </div>   
+        </main>
+        <script src="/js/script.js"></script>
+        
+    </body>
+    <footer>
+        <p class="footer-texto">Creado por: Albeccos &#174; Copyright &#169;2024</p>
+        <div class="brands">
+            <a href="https://github.com/Albeccos" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alex-beccabunco/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        
+    </footer>
+</html>
